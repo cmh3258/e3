@@ -119,6 +119,9 @@ add_action( 'widgets_init', 'e3_widgets_init' );
 function e3_scripts() {
 	wp_enqueue_style( 'e3-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'custom', get_template_directory_uri() . '/custom.css' );
+
+
 	wp_enqueue_script( 'e3-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'e3-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
