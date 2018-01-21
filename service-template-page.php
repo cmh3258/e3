@@ -20,7 +20,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<div class="grid-main">
+			<div class="grid-main container">
 				<div class="banner">
 					<img src="assets/1Artboard 14 copy 2.jpg" class="banner-img">
 					<div class="row-2 banner-info-container">
@@ -94,7 +94,7 @@ get_header(); ?>
 											<?php the_field('quote'); ?>
 										</h3>
 										<?php if(get_field('quote_source')): ?>
-											<h5><?php { the_field('quote_source'); }</h5>
+											<h5><?php { the_field('quote_source'); } ?></h5>
 										<?php endif; ?>
 									</div>
 								<?php endif; ?>
@@ -107,36 +107,42 @@ get_header(); ?>
 
 				<hr>
 
-				<?php if(get_field('insights_main_header') && get_field('insights_header')): ?>
+				<?php if(get_field('insights_main_header')): ?>
 					<section>
-						<h5 class="info-title"><?php the_field('insights_main_headeri'); ?></h5>
+						<h5 class="info-title"><?php the_field('insights_main_header'); ?></h5>
 						<div class="row-3">
 							<!-- Loop through these - texts, colors, icons, etc -->
 							<div class="">
 								<div class="info-header">
-									<img src="assets/wrench.png" alt="" class="info-icon"/>
-									<h4 class="green-text"><?php get_field('insights_header'); ?></h4>
+									<?php if (get_field('insights_icon_a')): ?>
+										<img src="<?php the_field('insights_icon_a'); ?>" alt="" class="info-icon"/>
+									<?php endif; ?>
+									<h4 class="green-text"><?php the_field('insights_header_a'); ?></h4>
 								</div>
 								<p class="info-text">
-									<?php get_field('insights_description'); ?>
+									<?php the_field('insights_description_a'); ?>
 								</p>
 							</div>
 							<div class="">
 								<div class="info-header">
-									<img src="assets/roadmap.png" alt="" class="info-icon"/>
-									<h4 class="purple-text">Roadmap for Administrators</h4>
+									<?php if (get_field('insights_icon_b')): ?>
+										<img src="<?php the_field('insights_icon_b'); ?>" alt="" class="info-icon"/>
+									<?php endif; ?>
+									<h4 class="purple-text"><?php the_field('insights_header_b'); ?></h4>
 								</div>
 								<p class="info-text">
-									To guide decision-making for resource al- location, teaching strategies, family en- gagement, and school culture
+									<?php the_field('insights_description_b'); ?>
 								</p>
 							</div>
 							<div class="">
 								<div class="info-header">
-									<img src="assets/school.png" alt="" class="info-icon"/>
-									<h4 class="orange-text">Intense Professional Development</h4>
+									<?php if (get_field('insights_icon_c')): ?>
+										<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-icon"/>
+									<?php endif; ?>
+									<h4 class="orange-text"><?php the_field('insights_header_c'); ?></h4>
 								</div>
 								<p class="info-text">
-									For campus leadership teams and district staff to build action plans that utilize these tools to strengthen systems
+									<?php the_field('insights_description_c'); ?>
 								</p>
 							</div>
 						</div>
