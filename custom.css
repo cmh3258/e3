@@ -12,6 +12,10 @@ section{
 
 
 /* Nav */
+	.site-header{
+		margin-top:1em !important;
+	}
+
 	.custom-logo-link img{
 		width: 10em;
 	}

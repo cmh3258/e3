@@ -22,12 +22,14 @@ get_header(); ?>
 
 			<div class="grid-main container">
 				<div class="banner">
-					<img src="assets/1Artboard 14 copy 2.jpg" class="banner-img">
+					<?php if (get_field('service_banner_image')): ?>
+						<img src="<?php the_field('service_banner_image'); ?>" class="banner-img">
+					<?php endif; ?>
 					<div class="row-2 banner-info-container">
 						<div class="banner-info">
 						<div class="col-4">
 							<!-- logo -->
-							<img src="assets/1Artboard 24 copy 2.png" alt="None" class="service-logo">
+							<img src="<?php the_field('service_logo'); ?>" alt="None" class="service-logo">
 							<h3 class="service-description">
 								<?php 
 									if(get_field('service_description')){ 
@@ -68,12 +70,12 @@ get_header(); ?>
 							<div class="row-3">
 								<div class="">
 									<p>
-										Recognized by the White House Initiative on Educational Excellence for Hispanics, E3 ExcELL is a roadmap for systems change to increase achievement for English Language Learners. It utilizes a research-based tool to evaluate school practices and empowers campuses to better support ELL students.
+										<?php the_field('description_1st_half'); ?>
 									</p>
 								</div>
 								<div class="">
 									<p>
-										To develop action plans, E3 ExcELL also provides training for campus teams that include strengthening community engagement, aligning systems that support teacher effectiveness, and embracing the cultures of ELLs to enhance school climate.
+										<?php the_field('description_2nd_half'); ?>
 									</p>
 								</div>
 								<div class="">
@@ -160,5 +162,5 @@ get_header(); ?>
 
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
