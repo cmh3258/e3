@@ -42,17 +42,19 @@ get_header(); ?>
 						<?php if (get_field('service_stats')): ?>
 							<div class="">
 								<h5 class="service-secondary-description"><?php the_field('service_stat_header') ?></h5>
-								CHANGE BELOW
-								<!-- this will loop -->
-								<h4 class="service-stat">
-									<span class="large-number">9</span> Districts
-								</h4>
-								<h4 class="service-stat">
-									<span class="large-number">27</span> Schools
-								</h4>
-								<h4 class="service-stat">
-									<span class="large-number">28,000</span> Students
-								</h4>
+								
+								<?php 
+									// Split the list and display properly
+									$stats = get_field('service_stats'); 
+									$list = explode('<li>', $stats);
+									foreach ($list as $key) {
+										$values = explode(' ', $key);
+										echo "<h4 class='service-stat'>
+											<span class='large-number'>$values[0]</span> $values[1]
+										</h4>";
+									}
+								?>
+
 							</div>
 						<?php endif; ?> 
 
