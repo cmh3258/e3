@@ -165,6 +165,14 @@ ul li{
 }
 
 
+ul.children .page_item{
+	background: white;
+}
+ul.children .current_page_item{
+	background: green;
+}
+
+
 /* Footer */
 footer{
 	background: gray;
