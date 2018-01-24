@@ -1,4 +1,7 @@
 <?php
+
+/* Template Name: Contact Page Template */
+
 /**
  * The template for displaying all pages
  *
@@ -16,31 +19,37 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			
+			<div class="grid-main container">
+				<div>
+					<!-- <h2>Contact Us</h2> -->
+					<!-- Maybe use: WPForms -->
+					<?php
+						while ( have_posts() ) : the_post();
 
+							get_template_part( 'template-parts/content', 'page' );
 
-		<div class="grid">
-			<div>
-				<h2>Contact Us</h2>
-				<!-- Maybe use: WPForms -->
-				<form>
-					<input type="" name="" placeholder="">
-				</form>
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
+
+						endwhile; // End of the loop.
+					?>
+				</div>
+				<div>
+					<h4>Director of Strategic</h4>
+					<ul>
+						<li>D Thompson</li>
+						<li>(512) 568-5035</li>
+						<li>dthompson@e3alliance.org</li>
+					</ul>
+				</div>
 			</div>
-			<div>
-				<h4>Director of Strategic</h4>
-				<ul>
-					<li>D Thompson</li>
-					<li>(512) 568-5035</li>
-					<li>dthompson@e3alliance.org</li>
-				</ul>
-			</div>
-		</div>
-
-
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

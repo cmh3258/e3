@@ -1,6 +1,6 @@
 <?php 
 
-/* Template Name: CustomPageT1 */
+/* Template Name: Services Template */
 
 /**
  * The template for displaying all pages
