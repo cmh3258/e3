@@ -38,11 +38,11 @@ get_header(); ?>
 					?>
 				</div>
 				<div>
-					<h4>Director of Strategic</h4>
+					<h4 class="title gray-header">Director of Strategic</h4>
 					<ul>
-						<li>D Thompson</li>
-						<li>(512) 568-5035</li>
-						<li>dthompson@e3alliance.org</li>
+						<li class="title-condensed e3-blue">D Thompson</li>
+						<li class="title-condensed e3-blue">(512) 568-5035</li>
+						<li class="title-condensed e3-blue">dthompson@e3alliance.org</li>
 					</ul>
 				</div>
 			</div>

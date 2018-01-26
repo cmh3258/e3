@@ -12,26 +12,13 @@
  * @package e3
  */
 
-get_header(); ?>
+	ob_clean();
+	ob_start();
 
-	<div id="primary" class="content-area container">
-		<main id="main" class="site-main">
-
-			<h1>content</h1>
-			<h1>content</h1>
-
-			<h1>content</h1>
-			<h1>content</h1>
-			<h1>content</h1>
-			<h1>content</h1>
-			<h1>content</h1>
-			
+	$url = get_permalink(61);
+	echo $url;
+	wp_redirect($url);
+	exit();
 
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-
-// get_sidebar();
-get_footer();
+?>

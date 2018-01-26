@@ -18,7 +18,7 @@
 			<div class="container grid-footer">
 				<!-- This can be static -->
 				<div class="">
-					<h4>E3 Alliance</h4>
+					<h4 class="title white">E3 Alliance</h4>
 					<ul>
 						<li>5930 Middle Fiskville Rd.</li>
 						<li>Suite 507</li>
@@ -26,7 +26,7 @@
 					</ul>
 				</div>
 				<div class="">
-					<h4>Our Services</h4>
+					<h4 class="title white">Our Services</h4>
 					<ul>
 						<li>E3 Excell</li>
 						<li>3D Growth</li>
@@ -34,17 +34,19 @@
 					</ul>
 				</div>
 				<div class="">
-					<h4>Contact</h4>
+					<h4 class="title white">Contact</h4>
 					<ul>
 						<li>D Thompson</li>
 						<li>(512) 568-5035</li>
 						<li>dthompson@e3alliance.org</li>
 					</ul>
 				</div>
-				<div>
+				
+			</div>
+
+			<div class="container">
 					<p class="copyright">Copyright &#x24B8; 2017 E3 Alliance. All Rights Reserved.</p>
 				</div>
-			</div>
 
 		<!-- </div> -->
 	</footer><!-- #colophon -->

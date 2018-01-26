@@ -30,18 +30,18 @@ get_header(); ?>
 						<div class="col-4">
 							<!-- logo -->
 							<img src="<?php the_field('service_logo'); ?>" alt="None" class="service-logo">
-							<h3 class="service-description">
+							<h2 class="white sentence">
 								<?php 
 									if(get_field('service_description')){ 
 										the_field('service_description');
 									}; 
 								?>
-							</h3>
+							</h2>
 						</div>
 						
 						<?php if (get_field('service_stats')): ?>
 							<div class="">
-								<h5 class="service-secondary-description"><?php the_field('service_stat_header') ?></h5>
+								<h5 class="title-condensed gray-header-light"><?php the_field('service_stat_header') ?></h5>
 								
 								<?php 
 									// Split the list and display properly
@@ -49,7 +49,7 @@ get_header(); ?>
 									$list = explode('<li>', $stats);
 									foreach ($list as $key) {
 										$values = explode(' ', $key);
-										echo "<h4 class='service-stat'>
+										echo "<h4 class='service-stat title-condensed'>
 											<span class='large-number'>$values[0]</span> $values[1]
 										</h4>";
 									}
@@ -66,39 +66,42 @@ get_header(); ?>
 				<?php if (get_field('description_header') && get_field('description')): ?>
 					<section>
 						<div>
-							<h5 class="info-title">
-								<?php the_field('description_header'); ?>
-							</h5>
+							<!-- <h5 class="info-title">
+								
+							</h5> -->
 							<div class="row-3">
 								<div class="">
+									<h4 class="title gray-header">
+										<?php the_field('description_header'); ?>
+									</h4>
 									<p>
 										<?php the_field('description_1st_half'); ?>
 									</p>
 								</div>
-								<div class="">
+								<div class="top26">
 									<p>
 										<?php the_field('description_2nd_half'); ?>
 									</p>
 								</div>
 								<div class="">
 									<!-- This should be some sort of navigation??? -->
-									<h4>Downloads</h4>
+									<h4 class="title gray-header">Downloads</h4>
 									<div class="gray-nav-box">
 										<ul>
-											<li><span class="download-icon"></span> Introduction</li>
-											<li><span class="download-icon"></span> FAQ</li>
-											<li><span class="download-icon"></span> Service Details</li>
-											<li><span class="download-icon"></span> Whitepaper</li>
+											<li class="title-condensed"><span class="download-icon"></span> Introduction</li>
+											<li class="title-condensed"><span class="download-icon"></span> FAQ</li>
+											<li class="title-condensed"><span class="download-icon"></span> Service Details</li>
+											<li class="title-condensed"><span class="download-icon"></span> Whitepaper</li>
 										</ul>
 									</div>
 								</div>
 								<?php if (get_field('quote')): ?>
 									<div class="quote">
-										<h3>
+										<h3 class="title-condensed e3-blue">
 											<?php the_field('quote'); ?>
 										</h3>
 										<?php if(get_field('quote_source')): ?>
-											<h5><?php { the_field('quote_source'); } ?></h5>
+											<h5 class="title e3-blue"><?php { the_field('quote_source'); } ?></h5>
 										<?php endif; ?>
 									</div>
 								<?php endif; ?>
@@ -113,7 +116,7 @@ get_header(); ?>
 
 				<?php if(get_field('insights_main_header')): ?>
 					<section>
-						<h5 class="info-title"><?php the_field('insights_main_header'); ?></h5>
+						<h4 class="title gray-header"><?php the_field('insights_main_header'); ?></h4>
 						<div class="row-3">
 							<!-- Loop through these - texts, colors, icons, etc -->
 							<div class="">
@@ -121,9 +124,9 @@ get_header(); ?>
 									<?php if (get_field('insights_icon_a')): ?>
 										<img src="<?php the_field('insights_icon_a'); ?>" alt="" class="info-icon"/>
 									<?php endif; ?>
-									<h4 class="green-text"><?php the_field('insights_header_a'); ?></h4>
+									<h4 class="e3-green"><?php the_field('insights_header_a'); ?></h4>
 								</div>
-								<p class="info-text">
+								<p>
 									<?php the_field('insights_description_a'); ?>
 								</p>
 							</div>
@@ -134,7 +137,7 @@ get_header(); ?>
 									<?php endif; ?>
 									<h4 class="purple-text"><?php the_field('insights_header_b'); ?></h4>
 								</div>
-								<p class="info-text">
+								<p>
 									<?php the_field('insights_description_b'); ?>
 								</p>
 							</div>
@@ -145,7 +148,7 @@ get_header(); ?>
 									<?php endif; ?>
 									<h4 class="orange-text"><?php the_field('insights_header_c'); ?></h4>
 								</div>
-								<p class="info-text">
+								<p>
 									<?php the_field('insights_description_c'); ?>
 								</p>
 							</div>
