@@ -17,16 +17,16 @@
 
 get_header(); ?>
 
+
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main container">
 			
-			<div class="grid-main container">
-				<div>
-					<!-- <h2>Contact Us</h2> -->
-					<!-- Maybe use: WPForms -->
+			<hr>
+			
+			<div class="grid-header">
+				<div class="col-4">
 					<?php
 						while ( have_posts() ) : the_post();
-
 							get_template_part( 'template-parts/content', 'page' );
 
 							// If comments are open or we have at least one comment, load up the comment template.
@@ -38,7 +38,7 @@ get_header(); ?>
 					?>
 				</div>
 				<div>
-					<h4 class="title gray-header">Director of Strategic</h4>
+					<h4 class="title gray-header top3">Director of Strategic</h4>
 					<ul>
 						<li class="title-condensed e3-blue">D Thompson</li>
 						<li class="title-condensed e3-blue">(512) 568-5035</li>

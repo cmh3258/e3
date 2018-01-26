@@ -164,6 +164,7 @@ h4.service-stat{
 	.col-2{
 		grid-column: 1 / 2;
 	}
+	
 
 
 /* Colors */
@@ -241,6 +242,25 @@ h4.service-stat{
 	.top26{
 		margin-top: 26px;
 	}
+	.top3{
+		margin-top: 3em;
+	}
+
+
+/* Blog Post Styles */
+	h1.entry-title{
+		font-family: AgendaMediumCondensed;
+		color: #15345D;
+		font-size: 2em;
+	}
+
+/* Contact Form Styles */
+ 	.wpforms-field-label{
+		font-family: AgendaBold;
+		color: #15345D;
+		font-size: 1em;
+ 	}
+ 	
 
 
 /* Footer */
