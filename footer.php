@@ -28,9 +28,9 @@
 				<div class="">
 					<h4 class="title white">Our Services</h4>
 					<ul>
-						<li>E3 Excell</li>
-						<li>3D Growth</li>
-						<li>RaiseUp Texas</li>
+						<li><a href="<?php echo get_permalink(61) ?>">E3 Excell</a></li>
+						<li><a href="<?php echo get_permalink(61) ?>">3D Growth</a></li>
+						<li><a href="<?php echo get_permalink(61) ?>">RaiseUp Texas</a></li>
 					</ul>
 				</div>
 				<div class="">
@@ -38,7 +38,7 @@
 					<ul>
 						<li>D Thompson</li>
 						<li>(512) 568-5035</li>
-						<li>dthompson@e3alliance.org</li>
+						<li><a href="mailto:dthompson@e3alliance.org?Subject=E3%20Question" class="email-link">dthompson@e3alliance.org</a></li>
 					</ul>
 				</div>
 				

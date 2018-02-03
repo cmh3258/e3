@@ -23,6 +23,7 @@ get_header(); ?>
 			
 			<hr>
 			
+			<section>
 			<div class="grid-header">
 				<div class="col-4">
 					<?php
@@ -42,10 +43,12 @@ get_header(); ?>
 					<ul>
 						<li class="title-condensed e3-blue">D Thompson</li>
 						<li class="title-condensed e3-blue">(512) 568-5035</li>
-						<li class="title-condensed e3-blue">dthompson@e3alliance.org</li>
+						<li class="title-condensed e3-blue"><a href="mailto:dthompson@e3alliance.org?Subject=E3%20Question" class="email-link">dthompson@e3alliance.org</a></li>
 					</ul>
 				</div>
 			</div>
+			</section>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

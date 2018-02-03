@@ -40,7 +40,7 @@ get_header(); ?>
 						</div>
 						
 						<?php if (get_field('service_stats')): ?>
-							<div class="">
+							<div class="col-1">
 								<h5 class="title-condensed gray-header-light"><?php the_field('service_stat_header') ?></h5>
 								
 								<?php 
@@ -88,10 +88,38 @@ get_header(); ?>
 									<h4 class="title gray-header">Downloads</h4>
 									<div class="gray-nav-box">
 										<ul>
-											<li class="title-condensed"><span class="download-icon"></span> Introduction</li>
-											<li class="title-condensed"><span class="download-icon"></span> FAQ</li>
-											<li class="title-condensed"><span class="download-icon"></span> Service Details</li>
-											<li class="title-condensed"><span class="download-icon"></span> Whitepaper</li>
+
+											<?php if (get_field('introduction_file')): ?>
+												<li class="title-condensed">
+													<a href="<?php the_field('introduction_file'); ?>" download>
+														<span class="download-icon"></span> Introduction
+													</a>
+												</li>
+											<?php endif; ?>
+
+											<?php if (get_field('faq_file')): ?>
+												<li class="title-condensed">
+													<a href="<?php the_field('faq_file'); ?>" download>
+														<span class="download-icon"></span> Introduction
+													</a>
+												</li>
+											<?php endif; ?>
+
+											<?php if (get_field('service_details_file')): ?>
+												<li class="title-condensed">
+													<a href="<?php the_field('service_details_file'); ?>" download>
+														<span class="download-icon"></span> Introduction
+													</a>
+												</li>
+											<?php endif; ?>
+
+											<?php if (get_field('Whitepaper_file')): ?>
+												<li class="title-condensed">
+													<a href="<?php the_field('Whitepaper_file'); ?>" download>
+														<span class="download-icon"></span> Introduction
+													</a>
+												</li>
+											<?php endif; ?>
 										</ul>
 									</div>
 								</div>
