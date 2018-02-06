@@ -41,7 +41,7 @@ get_header(); ?>
 						
 						<?php if (get_field('service_stats')): ?>
 							<div class="col-1">
-								<h5 class="title-condensed gray-header-light"><?php the_field('service_stat_header') ?></h5>
+								<h4 class="title-condensed gray-header-light"><?php the_field('service_stat_header') ?></h4>
 								
 								<?php 
 									// Split the list and display properly
@@ -49,9 +49,11 @@ get_header(); ?>
 									$list = explode('<li>', $stats);
 									foreach ($list as $key) {
 										$values = explode(' ', $key);
-										echo "<h4 class='service-stat title-condensed'>
-											<span class='large-number'>$values[0]</span> $values[1]
-										</h4>";
+										if (strpos($values[0], "\n") == 0) {
+											echo "<h4 class='service-stat title-condensed'>
+												<span class='large-number'>$values[0]</span> $values[1]
+											</h4>";
+										}
 									}
 								?>
 

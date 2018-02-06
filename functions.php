@@ -126,11 +126,24 @@ function e3_scripts() {
 
 	wp_enqueue_script( 'e3-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'e3_scripts' );
+
+
+/*//load the typekit - Agenda Font
+wp_enqueue_script( 'typekit', '//use.typekit.net/wlv7uhx.js');
+function typekit_inline() {
+	if ( wp_script_is( 'typekit', 'done' ) ) { ?>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<?php }
+}
+ add_action( 'wp_head', 'elp_typekit_inline' );*/
+
 
 //this function creates a simple page with title Custom Theme Options Page.
 function theme_option_page() {
