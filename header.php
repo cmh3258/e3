@@ -26,22 +26,31 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'e3' ); ?></a>
 
-	<header id="masthead" class="site-header container">
-		<div class="site-branding">
-			<?php the_custom_logo(); ?>
-		</div><!-- .site-branding -->
+	<div class="top-rect-border">
+		<div class="inner-rect-border"></div>
+	</div>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'e3' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<div class="container">
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'e3' ); ?></a>
+
+		<header id="masthead" class="site-header">
+			<div class="site-branding">
+				<?php the_custom_logo(); ?>
+			</div><!-- .site-branding -->
+
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'e3' ); ?></button>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+			</nav><!-- #site-navigation -->
+
+		</header><!-- #masthead -->
+		<hr class="header-hr">
+	</div>
 
 	<div id="content" class="site-content">
