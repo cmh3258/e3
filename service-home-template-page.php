@@ -18,7 +18,7 @@
 	ob_clean();
 	ob_start();
 
-	$url = get_permalink(41);
+	$url = get_permalink(get_page_by_title('E3 Excel'));
 	echo $url;
 	wp_redirect($url);
 	exit();

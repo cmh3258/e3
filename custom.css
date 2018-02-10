@@ -213,6 +213,11 @@ h4.service-stat{
 .info-icon{
 	width: 4em;
 }
+.info-large-icon{
+    height: 30px;
+    max-width: fit-content;
+    margin-bottom: 1em;
+}
 
 
 /* Grid */

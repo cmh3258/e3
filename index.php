@@ -15,7 +15,7 @@
 	ob_clean();
 	ob_start();
 
-	$url = get_permalink(61);
+	$url = get_permalink(get_page_by_title('Overview'));
 	echo $url;
 	wp_redirect($url);
 	exit();

@@ -29,7 +29,9 @@ get_header(); ?>
 						<div class="banner-info">
 						<div class="col-4">
 							<!-- logo -->
-							<img src="<?php the_field('service_logo'); ?>" alt="None" class="service-logo">
+							<?php if (get_field('service_logo')): ?>
+								<img src="<?php the_field('service_logo'); ?>" alt="None" class="service-logo">
+							<?php endif; ?>
 							<h2 class="white sentence">
 								<?php 
 									if(get_field('service_description')){ 
@@ -65,7 +67,7 @@ get_header(); ?>
 				</div>
 
 				
-				<?php if (get_field('description_header') && get_field('description')): ?>
+				<?php if (get_field('description_header')): ?>
 					<section>
 						<div>
 							<!-- <h5 class="info-title">
@@ -85,6 +87,11 @@ get_header(); ?>
 										<?php the_field('description_2nd_half'); ?>
 									</p>
 								</div>
+								<?php if (get_field('introduction_file') || 
+									get_field('faq_file') || 
+									get_field('service_details_file') ||
+									get_field('Whitepaper_file')
+									): ?>
 								<div class="">
 									<!-- This should be some sort of navigation??? -->
 									<h4 class="title gray-header">Downloads</h4>
@@ -125,6 +132,8 @@ get_header(); ?>
 										</ul>
 									</div>
 								</div>
+								<?php endif; ?>
+
 								<?php if (get_field('quote')): ?>
 									<div class="quote">
 										<h3 class="title-condensed e3-blue">
@@ -151,10 +160,16 @@ get_header(); ?>
 							<!-- Loop through these - texts, colors, icons, etc -->
 							<div class="">
 								<div class="info-header">
-									<?php if (get_field('insights_icon_a')): ?>
-										<img src="<?php the_field('insights_icon_a'); ?>" alt="" class="info-icon"/>
+									<?php if (get_field('insights_header_a')): ?>
+										<?php if (get_field('insights_icon_a')): ?>
+											<img src="<?php the_field('insights_icon_a'); ?>" alt="" class="info-icon"/>
+										<?php endif; ?>
+										<h4 class="e3-green"><?php the_field('insights_header_a'); ?></h4>
+									<?php else: ?>
+										<?php if (get_field('insights_icon_a')): ?>
+											<img src="<?php the_field('insights_icon_a'); ?>" alt="" class="info-large-icon"/>
+										<?php endif; ?>
 									<?php endif; ?>
-									<h4 class="e3-green"><?php the_field('insights_header_a'); ?></h4>
 								</div>
 								<p>
 									<?php the_field('insights_description_a'); ?>
@@ -162,10 +177,16 @@ get_header(); ?>
 							</div>
 							<div class="">
 								<div class="info-header">
-									<?php if (get_field('insights_icon_b')): ?>
-										<img src="<?php the_field('insights_icon_b'); ?>" alt="" class="info-icon"/>
+									<?php if (get_field('insights_header_b')): ?>
+										<?php if (get_field('insights_icon_b')): ?>
+											<img src="<?php the_field('insights_icon_b'); ?>" alt="" class="info-icon"/>
+										<?php endif; ?>
+										<h4 class="purple-text"><?php the_field('insights_header_b'); ?></h4>
+									<?php else: ?>
+										<?php if (get_field('insights_icon_b')): ?>
+											<img src="<?php the_field('insights_icon_b'); ?>" alt="" class="info-large-icon"/>
+										<?php endif; ?>
 									<?php endif; ?>
-									<h4 class="purple-text"><?php the_field('insights_header_b'); ?></h4>
 								</div>
 								<p>
 									<?php the_field('insights_description_b'); ?>
@@ -173,10 +194,16 @@ get_header(); ?>
 							</div>
 							<div class="">
 								<div class="info-header">
-									<?php if (get_field('insights_icon_c')): ?>
-										<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-icon"/>
+									<?php if (get_field('insights_header_c')): ?>
+										<?php if (get_field('insights_icon_c')): ?>
+											<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-icon"/>
+										<?php endif; ?>
+										<h4 class="orange-text"><?php the_field('insights_header_c'); ?></h4>
+									<?php else: ?>
+										<?php if (get_field('insights_icon_c')): ?>
+											<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-large-icon"/>
+										<?php endif; ?>
 									<?php endif; ?>
-									<h4 class="orange-text"><?php the_field('insights_header_c'); ?></h4>
 								</div>
 								<p>
 									<?php the_field('insights_description_c'); ?>
