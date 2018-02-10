@@ -31,6 +31,8 @@ get_header(); ?>
 							<!-- logo -->
 							<?php if (get_field('service_logo')): ?>
 								<img src="<?php the_field('service_logo'); ?>" alt="None" class="service-logo">
+							<?php else: ?>
+								<div class="banner-top-42"></div>
 							<?php endif; ?>
 							<h2 class="white sentence">
 								<?php 
@@ -149,9 +151,10 @@ get_header(); ?>
 						</div>
 					</section>
 
+				<hr>
+
 				<?php endif; ?>
 
-				<hr>
 
 				<?php if(get_field('insights_main_header')): ?>
 					<section>
