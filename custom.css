@@ -83,7 +83,7 @@ section{
 		margin-top:1em !important;
 	}
 	.header-hr{
-		margin-bottom:5em;
+		display: none;
 	}
 	.custom-logo-link img{
 		width: 10em;
@@ -432,6 +432,10 @@ h4.service-stat{
 	}
 	.custom-logo-link img{
 		margin-top: 5px;
+	}
+	.header-hr{
+		display: block;
+		margin-bottom:5em;
 	}
 
 }
