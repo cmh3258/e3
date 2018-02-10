@@ -53,9 +53,10 @@ get_header(); ?>
 									$list = explode('<li>', $stats);
 									foreach ($list as $key) {
 										$values = explode(' ', $key);
+										$remaining = implode(' ' , array_slice($values, 1));
 										if (strpos($values[0], "\n") == 0) {
 											echo "<h4 class='service-stat title-condensed'>
-												<span class='large-number'>$values[0]</span> $values[1]
+												<span class='large-number'>$values[0]</span> $remaining
 											</h4>";
 										}
 									}
