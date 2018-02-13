@@ -30,7 +30,7 @@
 					<ul>
 						<li><a href="<?php echo get_permalink(get_page_by_title('E3 Excel')) ?>">E3 Excell</a></li>
 						<li><a href="<?php echo get_permalink(get_page_by_title('3D Growth')) ?>">3D Growth</a></li>
-						<!--<li><a href="<?php echo get_permalink(61) ?>">RaiseUp Texas</a></li>-->
+						<li><a href="<?php echo get_permalink(get_page_by_title('RaiseUp Texas')) ?>">Raiseup Texas</a></li>
 					</ul>
 				</div>
 				<div class="">

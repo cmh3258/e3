@@ -123,14 +123,23 @@ section{
 	}
 
 	/* Nav Dropdown */
-	ul.children .page_item{
+	ul.children .page_item,
+	.sub-menu{
 		background: #15345D;
 	}
-	ul.children .page_item a{
+	ul.children .page_item a,
+	.sub-menu a{
 		color: white;
 		transition: color 0.15s ease;
 	}
-	ul.children .page_item a:hover{
+	ul.children .page_item a:hover,
+	.sub-menu a:hover{
+		color: #2F9F48;
+	}
+	.main-navigation li.menu-item-has-children a:hover{
+		color: initial;
+	}
+	.main-navigation li.menu-item-has-children ul a:hover{
 		color: #2F9F48;
 	}
 	/*ul.children .current_page_item{

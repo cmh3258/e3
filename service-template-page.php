@@ -171,7 +171,9 @@ get_header(); ?>
 										<h4 class="e3-green"><?php the_field('insights_header_a'); ?></h4>
 									<?php else: ?>
 										<?php if (get_field('insights_icon_a')): ?>
-											<img src="<?php the_field('insights_icon_a'); ?>" alt="" class="info-large-icon"/>
+											<a href="<?php the_field('insights_link_a'); ?>">
+												<img src="<?php the_field('insights_icon_a'); ?>" alt="" class="info-large-icon"/>
+											</a>
 										<?php endif; ?>
 									<?php endif; ?>
 								</div>
@@ -188,7 +190,9 @@ get_header(); ?>
 										<h4 class="purple-text"><?php the_field('insights_header_b'); ?></h4>
 									<?php else: ?>
 										<?php if (get_field('insights_icon_b')): ?>
-											<img src="<?php the_field('insights_icon_b'); ?>" alt="" class="info-large-icon"/>
+											<a href="<?php the_field('insights_link_b'); ?>">
+												<img src="<?php the_field('insights_icon_b'); ?>" alt="" class="info-large-icon"/>
+											</a>
 										<?php endif; ?>
 									<?php endif; ?>
 								</div>
@@ -205,7 +209,9 @@ get_header(); ?>
 										<h4 class="orange-text"><?php the_field('insights_header_c'); ?></h4>
 									<?php else: ?>
 										<?php if (get_field('insights_icon_c')): ?>
-											<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-large-icon"/>
+											<a href="<?php the_field('insights_link_c'); ?>">
+												<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-large-icon"/>
+											</a>
 										<?php endif; ?>
 									<?php endif; ?>
 								</div>
