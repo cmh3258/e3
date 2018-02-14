@@ -235,6 +235,9 @@ h4.service-stat{
     max-width: fit-content;
     margin-bottom: 1em;
 }
+.raise-up-adjustment{
+	height: 42px;
+}
 
 
 /* Grid */
@@ -464,6 +467,10 @@ h4.service-stat{
 	.header-hr{
 		display: block;
 		margin-bottom:5em;
+	}
+
+	.raise-up-adjustment{
+    	margin-top: -11px;
 	}
 
 }

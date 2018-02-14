@@ -153,7 +153,7 @@ get_header(); ?>
 						</div>
 					</section>
 
-				<hr>
+				<hr class="hr-below-banner">
 
 				<?php endif; ?>
 
@@ -211,7 +211,7 @@ get_header(); ?>
 									<?php else: ?>
 										<?php if (get_field('insights_icon_c')): ?>
 											<a href="<?php the_field('insights_link_c'); ?>">
-												<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-large-icon"/>
+												<img src="<?php the_field('insights_icon_c'); ?>" alt="" class="info-large-icon raise-up-adjustment"/>
 											</a>
 										<?php endif; ?>
 									<?php endif; ?>
