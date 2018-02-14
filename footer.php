@@ -14,6 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+
+
+
 		<!-- <div class="site-info"> -->
 			<div class="container grid-footer">
 				<!-- This can be static -->
@@ -28,9 +31,20 @@
 				<div class="">
 					<h4 class="title white">Our Services</h4>
 					<ul>
-						<li><a href="<?php echo get_permalink(get_page_by_title('E3 Excel')) ?>">E3 Excell</a></li>
+						<?php
+							$menuLocations = get_nav_menu_locations();
+							$menuID = $menuLocations['menu-1'];
+							$primaryNav = wp_get_nav_menu_items($menuID);
+							foreach ( $primaryNav as $navItem ) {
+							    //if has a parent, then add to Ourservices array
+							    if ($navItem->menu_item_parent) {
+							    	echo '<li><a href="'.$navItem->url.'" title="'.$navItem->title.'">'.$navItem->title.'</a></li>';
+							    }
+							}
+						?>
+						<!-- <li><a href="<?php echo get_permalink(get_page_by_title('E3 Excel')) ?>">E3 Excell</a></li>
 						<li><a href="<?php echo get_permalink(get_page_by_title('3D Growth')) ?>">3D Growth</a></li>
-						<li><a href="<?php echo get_permalink(get_page_by_title('RaiseUp Texas')) ?>">Raiseup Texas</a></li>
+						<li><a href="<?php echo get_permalink(get_page_by_title('RaiseUp Texas')) ?>">Raiseup Texas</a></li> -->
 					</ul>
 				</div>
 				<div class="">

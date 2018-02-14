@@ -69,6 +69,7 @@ get_header(); ?>
 					</div>
 				</div>
 
+				<hr class="hr-below-banner">
 				
 				<?php if (get_field('description_header')): ?>
 					<section>
@@ -221,6 +222,8 @@ get_header(); ?>
 							</div>
 						</div>
 					</section>
+
+
 				<?php endif; ?>
 
 			</div>
