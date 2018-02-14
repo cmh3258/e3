@@ -22,11 +22,14 @@
 				<!-- This can be static -->
 				<div class="">
 					<h4 class="title white">E3 Alliance</h4>
-					<ul>
-						<li>5930 Middle Fiskville Rd.</li>
-						<li>Suite 507</li>
-						<li>Austin, TX 78752</li>
-					</ul>
+					<?php
+						$page_id = get_page_by_title( 'Contact' );
+						if (get_field('address', $page_id)) {
+								echo '<div class="">';
+								the_field('address', $page_id);
+								echo '</div>';
+						}
+					?>
 				</div>
 				<div class="">
 					<h4 class="title white">Our Services</h4>
@@ -49,11 +52,14 @@
 				</div>
 				<div class="">
 					<h4 class="title white">Contact</h4>
-					<ul>
-						<li>D Thompson</li>
-						<li>(512) 568-5035</li>
-						<li><a href="mailto:dthompson@e3alliance.org?Subject=E3%20Question" class="email-link">dthompson@e3alliance.org</a></li>
-					</ul>
+					<?php
+						$page_id = get_page_by_title( 'Contact' );
+						if (get_field('contact_info', $page_id)) {
+								echo '<div class="">';
+								the_field('contact_info', $page_id);
+								echo '</div>';
+						}
+					?>
 				</div>
 				
 			</div>

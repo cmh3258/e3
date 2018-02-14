@@ -38,11 +38,14 @@ get_header(); ?>
 					</div>
 					<div>
 						<h4 class="title gray-header top3">Director of Strategic</h4>
-						<ul>
-							<li class="title-condensed e3-blue">D Thompson</li>
-							<li class="title-condensed e3-blue">(512) 568-5035</li>
-							<li class="title-condensed e3-blue"><a href="mailto:dthompson@e3alliance.org?Subject=E3%20Question" class="email-link">dthompson@e3alliance.org</a></li>
-						</ul>
+
+						<?php 
+							if (get_field('contact_info')) {
+								echo '<div class="contact-list">';
+								the_field('contact_info');
+								echo '</div>';
+							}
+						?>
 					</div>
 				</div>
 			</section>

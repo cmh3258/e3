@@ -354,6 +354,21 @@ h4.service-stat{
 		color: #15345D;
 		font-size: 1em;
  	}
+
+ 	.contact-list li{
+		color: #15345D;
+		font-family: agenda-condensed;
+		font-weight: 700;
+	    -webkit-font-smoothing: antialiased;
+	}
+	.contact-list li a{
+		color: #15345D;
+		font-family: agenda-condensed;
+		text-decoration: none;
+	}
+	.contact-list li a:hover{
+		color:#2F9F48;
+	}
  	
 /* Footer */
 	footer{
